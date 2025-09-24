@@ -1,103 +1,178 @@
-import Image from "next/image";
+import Hero from "./components/Hero";
+import CategorySection from "./components/CategorySection";
+
+const productsMaquinas = [
+  {
+    id: 1,
+    name: 'Maquina para tatuar Bishop Power Wand Full Kit',
+    href: '#',
+    price: '$5.850.000,00',
+    imageSrc: '/images/Critical-Full-Kit.webp',
+    imageAlt: 'Bishop Power Wand Full Kit',
+  },
+  {
+    id: 2,
+    name: 'Maquina para Tatuar rotativa inalambrica FK Irons Flux Max Yomico',
+    href: '#',
+    price: '$5.600.000,00',
+    imageSrc: '/images/Yomico.webp',
+    imageAlt: 'FK Irons Flux Max Yomico',
+  },
+  {
+    id: 3,
+    name: 'Máquina para tatuar rotativa inalámbrica FK Irons Flux Max Gold',
+    href: '#',
+    price: 'Desde $4.300.000,00',
+    imageSrc: '/images/MaquinaparatatuarrotativainalambricaFKIronsFluxMaxGold.webp',
+    imageAlt: 'FK Irons Flux Max Gold',
+  },
+  {
+    id: 4,
+    name: 'Máquina rotativa inalámbrica FK Irons One 4.0mm',
+    href: '#',
+    price: 'Precio no especificado',
+    imageSrc: '/images/MaquinarotativainalambricaFKIronsOne4.0mmgris.webp',
+    imageAlt: 'FK Irons One 4.0mm',
+  },
+];
+
+const productsPigmentos = [
+  {
+    id: 1,
+    name: 'Pigmento Panthera Black Gold',
+    href: '#',
+    price: '$1.115.000,00',
+    imageSrc: '/images/SetPigmentosparaTatuarPantheraxKindamox6150ml.webp',
+    imageAlt: 'Panthera Black Gold',
+  },
+];
+
+const productsMobiliario = [
+  {
+    id: 1,
+    name: 'Camilla Para Tatuar Inktop Eléctrica Ajustable con 2 Motores',
+    href: '#',
+    price: '$4.500.000,00',
+    imageSrc: '/images/CamillaInktopelectricaajustable2motores.png',
+    imageAlt: 'Camilla Inktop Eléctrica',
+  },
+  {
+    id: 2,
+    name: 'Camilla Hidráulica Para Tatuar',
+    href: '#',
+    price: '$2.990.000,00',
+    imageSrc: '/images/Camillahidraulica.png',
+    imageAlt: 'Camilla Hidráulica',
+  },
+  {
+    id: 3,
+    name: 'Camilla Inktop Eléctrica Ajustable Para Tatuar (1motor)',
+    href: '#',
+    price: '$2.100.000,00',
+    imageSrc: '/images/CamillaInktopelectricaajustable_1motor.png',
+    imageAlt: 'Camilla Inktop Eléctrica 1 motor',
+  },
+  {
+    id: 4,
+    name: 'Camilla Portable Para Tatuar Rosada',
+    href: '#',
+    price: '$850.000,00',
+    imageSrc: '/images/CamillaPortableRosada.png',
+    imageAlt: 'Camilla Portable Rosada',
+  },
+  {
+    id: 5,
+    name: 'Estacion de Trabajo Para Tatuar Pro 7 Cajones + Locker Lateral',
+    href: '#',
+    price: '$1.700.000,00',
+    imageSrc: '/images/Estacion_de_Trabajo_Pro_7_Cajones_Locker_Lateral.png',
+    imageAlt: 'Estacion de Trabajo Pro 7 Cajones + Locker Lateral',
+  },
+  {
+    id: 6,
+    name: 'Estacion de Trabajo Para Tatuar Pro 7 Cajones',
+    href: '#',
+    price: '$1.500.000,00',
+    imageSrc: '/images/EstaciondeTrabajoPro7Cajones.png',
+    imageAlt: 'Estacion de Trabajo Pro 7 Cajones',
+  },
+  {
+    id: 7,
+    name: 'Estación de Trabajo 7 Cajones',
+    href: '#',
+    price: '$1.200.000,00',
+    imageSrc: '/images/EstaciondeTrabajo7Cajonesnegro.jpg',
+    imageAlt: 'Estación de Trabajo 7 Cajones Negra',
+  },
+  {
+    id: 8,
+    name: 'Estación de Trabajo Para Tatuar con 5 Cajones',
+    href: '#',
+    price: '$980.000,00',
+    imageSrc: '/images/Estacion_de_trabajo_con_cajones_negro.png',
+    imageAlt: 'Estación de Trabajo Para Tatuar con 5 Cajones Negra',
+  },
+  {
+    id: 9,
+    name: 'Estacion de Trabajo para tatuar con 2 Puertas y 2 Cajones',
+    href: '#',
+    price: '$980.000,00',
+    imageSrc: '/images/estacion-con-puertas-negra.png',
+    imageAlt: 'Estacion de Trabajo para tatuar con 2 Puertas y 2 Cajones Negra',
+  },
+  {
+    id: 10,
+    name: 'Lampara Led Luna',
+    href: '#',
+    price: '$940.000,00',
+    imageSrc: '/images/LamparaLedLuna.png',
+    imageAlt: 'Lampara Led Luna',
+  },
+  {
+    id: 11,
+    name: 'Lámpara LED de 12 Brazos',
+    href: '#',
+    price: '$1.100.000,00',
+    imageSrc: '/images/Lampara-led-12-brazos.png',
+    imageAlt: 'Lámpara LED de 12 Brazos',
+  },
+  {
+    id: 12,
+    name: 'Lámpara LED de 6 Brazos',
+    href: '#',
+    price: '$650.000,00',
+    imageSrc: '/images/Lampara-led-6-Brazos.png',
+    imageAlt: 'Lámpara LED de 6 Brazos',
+  },
+];
+
+const productsCartuchosAgujasGrips = [
+  {
+    id: 1,
+    name: 'Cartuchos Pepax',
+    href: '#',
+    price: 'N/A',
+    imageSrc: '/images/pepax_Mesa_de_trabajo_1.jpg',
+    imageAlt: 'Cartuchos Pepax',
+  },
+  {
+    id: 2,
+    name: 'Cartuchos EZ',
+    href: '#',
+    price: 'N/A',
+    imageSrc: '/images/Termo-EZ.png',
+    imageAlt: 'Cartuchos EZ',
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <main>
+      <Hero />
+      <CategorySection title="Maquinas para Tatuar" products={productsMaquinas} />
+      <CategorySection title="Pigmentos para tatuar" products={productsPigmentos} />
+      <CategorySection title="Cartuchos Agujas Grips" products={productsCartuchosAgujasGrips} />
+      <CategorySection title="Mobiliario" products={productsMobiliario} />
+    </main>
   );
 }

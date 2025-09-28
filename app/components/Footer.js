@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-[var(--background)] text-[var(--foreground)] p-6 mt-12">
+    <footer className="relative z-10 bg-[var(--background)] text-[var(--foreground)] p-6 mt-12">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h3 className="text-lg font-semibold mb-4 text-[var(--primary-color)]">Big Brother Supply Tattoo</h3>

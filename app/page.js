@@ -167,7 +167,7 @@ const productsCartuchosAgujasGrips = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-[var(--background)] pt-20">
       <Hero />
       <CategorySection title="Maquinas para Tatuar" products={productsMaquinas} />
       <CategorySection title="Pigmentos para tatuar" products={productsPigmentos} />

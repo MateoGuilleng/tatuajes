@@ -232,17 +232,17 @@ export default function Home() {
       <Hero />
 
       <AnimateOnScroll>
-        <SectionDivider title="ESTUDIO ARTISTICO DE TATUAJES & PIERCING" backgroundImage="/images/Dragon-fondo.jpg" />
+        <SectionDivider title="ESTUDIO ARTISTICO DE TATUAJES & PIERCING" backgroundImage="/images/decoracion2.jpg" />
         <StudioInfo />
       </AnimateOnScroll>
 
       {/* Trabajos Section */}
       <AnimateOnScroll>
-        <SectionDivider title="TRABAJOS" backgroundImage="/images/Dragon-fondo.jpg" />
+        <SectionDivider title="TRABAJOS" backgroundImage="/images/decoracion3.jpg" />
         <div className="bg-[var(--background)] py-16 sm:py-24 lg:py-32 rounded-lg shadow-xl mb-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-4xl font-bold tracking-tight text-[var(--foreground)] sm:text-5xl uppercase">
-              Trabajos
+              Mira algunos de nuestros trabajos
             </h2>
             
             <p className="mt-4 text-lg leading-8 text-[var(--foreground)]">
@@ -270,13 +270,13 @@ export default function Home() {
       </AnimateOnScroll>
 
       <AnimateOnScroll>
-        <SectionDivider title="NOTICIAS" backgroundImage="/images/Dragon-fondo.jpg" />
+        <SectionDivider title="NOTICIAS" backgroundImage="/images/decoracion.jpg" />
         <NewsSection />
       </AnimateOnScroll>
 
       <AnimateOnScroll>
-        <SectionDivider title="BOUTIQUE BIG BROTHER SUPPLY" backgroundImage="/images/Dragon-fondo.jpg" />
-        <BoutiqueSection id="boutique-section" />
+        <SectionDivider title="PRODUCTOS" backgroundImage="/images/decoracion2.jpg" />
+        
       </AnimateOnScroll>
 
       <AnimateOnScroll>

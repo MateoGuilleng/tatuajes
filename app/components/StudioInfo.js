@@ -22,11 +22,8 @@ export default function StudioInfo() {
                 Big Brother Supply, un referente en Málaga
               </p>
               <p className="mt-6 text-xl leading-8 text-white">
-                Big Brother Supply es un estudio artístico de tatuajes y piercing fundado en 2005 bajo el pseudónimo de su fundador, Alberto Ramírez «Fido». Desde sus comienzos como tatuador, y desde la fecha de la apertura de el estudio, Big Brother Supply se ha posicionado en la provincia de Málaga como un referente gracias a la calidad artística y técnica de sus tatuajes y piercings.
-              </p>
-              <p className="mt-6 text-xl leading-8 text-white">
-                El equipo humano de Big Brother Supply cuenta con artistas y profesionales con amplia experiencia en todo tipo de estilos, desde lo más vintage a lo más rompedor y contemporáneo. Desde nuestra web, y en nombre de todos los que formamos Big Brother Supply, esperamos que descubras la inspiración en nuestros trabajos y te animes a visitarnos para contarnos que te gustaría hacerte.
-              </p>
+                Tenemos las mejores marcas del mercado y somos distribuidores autorizados en Colombia. Te ofrecemos productos 100% originales con garantía y respaldo de servicio técnico especializado. Aquí encontrarás todo lo que necesitas para tu estudio de tatuaje en un solo lugar, con la confianza y seguridad que tu arte merece.              </p>
+
               <div className="mt-10 flex">
                 <Link href="/estudio" className="btn-primary">
                   Ver página
@@ -35,7 +32,7 @@ export default function StudioInfo() {
             </div>
           </div>
           <Image
-            src="/images/big_naranja-023.avif"
+            src="/images/decoracion2.jpg"
             alt="Big Brother Supply Studio"
             className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
             width={2432}

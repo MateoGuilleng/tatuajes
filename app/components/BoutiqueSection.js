@@ -14,25 +14,8 @@ export default function BoutiqueSection() {
 
   return (
     <div className="bg-[var(--card-bg)] py-16 sm:py-24 lg:py-32 rounded-lg shadow-xl mb-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-2xl text-center mb-16">
-        
-        <p className="mt-4 text-lg leading-8 text-[var(--secondary-color)]">
-          Visita nuestro estudio con la mejor ropa y complementos
-        </p>
-      </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-8 items-center justify-center">
-        {boutiqueLogos.map((logo, index) => (
-          <div key={index} className="flex justify-center items-center p-4 bg-black rounded-lg h-24">
-            <Image
-              src={logo.src}
-              alt={logo.alt}
-              width={100}
-              height={100}
-              objectFit="contain"
-            />
-          </div>
-        ))}
-      </div>
+      
+      
     </div>
   );
 }

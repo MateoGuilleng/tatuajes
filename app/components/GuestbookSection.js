@@ -52,7 +52,7 @@ export default function GuestbookSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map((testimonial, index) => (
           <div key={index} className="bg-black p-6 rounded-lg shadow-md flex flex-col justify-between h-full">
-            <p className="text-gray-300 italic mb-4">"{testimonial.quote}"</p>
+            <p className="text-gray-300 italic mb-4">&quot;{testimonial.quote}&quot;</p>
             <p className="text-[var(--primary-color)] font-semibold text-right">- {testimonial.author}</p>
           </div>
         ))}

@@ -1,28 +1,28 @@
 import ProductCard from './ProductCard';
 
-export default function CategorySection({ title, products }) {
+export default function CategorySection({ title, products, bgColor, description }) {
   return (
-    <div className="relative z-10 bg-transparent py-16 sm:py-24 lg:py-32">
-      <div className="mx-auto max-w-md text-center relative p-8 flex flex-col items-center justify-center min-h-[200px]">
+    <div className={`relative z-10 ${bgColor} py-16 sm:py-24 lg:py-32 rounded-lg shadow-xl mb-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}>
+      <div className="mx-auto max-w-md text-center relative p-8 flex flex-col items-center justify-center min-h-[150px]">
         {/* Frame image (on top) */}
-        <img
+        {/* <img
           src="/images/marco-texto.jpg"
           alt="Marco de texto"
           className="absolute inset-0 w-full h-full object-contain pointer-events-none z-10"
-        />
+        /> */}
 
-        {/* Text content container with semi-transparent background (behind frame) */}
-        <div className="relative flex flex-col items-center justify-center bg-black bg-opacity-60 py-8 px-4 rounded-lg max-w-xs mx-auto z-0">
-          <h2 className="text-2xl pt-5 font-bold tracking-tight text-white">{title}</h2>
-          <p className="mt-4 pb-5 text-base leading-6 text-white">
-            Descubre una amplia gama de productos para tu estudio de tatuaje.
+        {/* Text content container, removed background */}
+        <div className="relative flex flex-col items-center justify-center py-4 px-4 rounded-lg max-w-sm mx-auto z-0">
+          <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-[var(--foreground)] leading-none">{title}</h2>
+          <p className="mt-2 pb-5 text-base leading-6 text-[var(--foreground)]">
+            {description}
           </p>
         </div>
       </div>
 
       {/* Grid de productos con más espacio entre tarjetas */}
-      <div className="bg-transparent mx-auto max-w-6xl px-8 sm:px-12 lg:px-16 mt-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 justify-items-center">
+      <div className="bg-transparent mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

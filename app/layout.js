@@ -12,21 +12,37 @@ const cinzelDecorative = Cinzel_Decorative({
 });
 
 export const metadata = {
-  title: "Big Brother Supply Tattoo",
-  description: "Todo para tu estudio de tatuaje",
+  title: "Big Brother Supply - Estudio de Tatuajes y Piercing",
+  description: "Estudio de tatuajes y piercing profesional en Mijas Costa, Málaga. Realismo, tradicional, piercing y más. ¡Visítanos!",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${cinzelDecorative.variable} antialiased`}>
+      <body
+        className={`${cinzelDecorative.variable} antialiased`}
+        style={{
+          "--background": "#000000", /* Deep Reddish Black */
+          "--foreground": "#FFFFFF", /* White for main text */
+          "--primary-color": "#BF0000", /* Deep Red */
+          "--secondary-color": "#800000", /* Even Darker Red for accents/hover */
+          "--card-bg": "#0A0A0A", /* Slightly lighter reddish dark for cards */
+          "--hover-color": "#FF0000", /* Bright Red for hover states */
+          "--btn-primary-bg": "#0A0A0A", /* Very dark background for primary button */
+          "--btn-primary-border": "#BF0000", /* Red border for primary button */
+          "--btn-primary-text": "#FFFFFF", /* White text for primary button */
+          "--btn-primary-hover-bg": "#1A0000", /* Darker red on hover */
+          backgroundColor: "var(--background)",
+          color: "var(--foreground)",
+        }}
+      >
         {/* Global Diffused Background Element */}
         <div
           className="fixed inset-0 -z-10 transform-gpu overflow-hidden blur-3xl"
           aria-hidden="true"
         >
           <div
-            className="relative h-full w-full bg-gradient-to-tr from-[var(--primary-color)] to-[var(--background)] opacity-30"
+            className="relative h-full w-full bg-gradient-to-tr from-[var(--primary-color)] to-[var(--background)] opacity-50"
             style={{
               clipPath:
                 `polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%,

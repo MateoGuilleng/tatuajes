@@ -1,5 +1,13 @@
 import Hero from "./components/Hero";
 import CategorySection from "./components/CategorySection";
+import ParallaxImages from "./components/ParallaxImages";
+import StudioInfo from "./components/StudioInfo";
+import WorkGallery from "./components/WorkGallery";
+import GuestbookSection from "./components/GuestbookSection";
+import NewsSection from "./components/NewsSection";
+import BoutiqueSection from "./components/BoutiqueSection";
+import SectionDivider from "./components/SectionDivider"; // Import the new component
+import AnimateOnScroll from "./components/AnimateOnScroll"; // Import the new component
 
 const productsMaquinas = [
   {
@@ -165,14 +173,145 @@ const productsCartuchosAgujasGrips = [
   },
 ];
 
+const galleries = [
+  {
+    title: "Fido",
+    description: "Artista Tattoo",
+    linkHref: "/trabajos/fido",
+    imageSrc: "/images/tatuaje_white_1.png",
+    imageAlt: "Big Brother Supply Artist",
+  },
+  {
+    title: "Carolina",
+    description: "Artista Tattoo",
+    linkHref: "/trabajos/carolina",
+    imageSrc: "/images/tatuaje_white_2.png",
+    imageAlt: "Carolina Tattoo Artist",
+  },
+  {
+    title: "Raul",
+    description: "Artista Tattoo",
+    linkHref: "/trabajos/raul",
+    imageSrc: "/images/tatuaje_white_1.png",
+    imageAlt: "Raul Tattoo Artist",
+  },
+  {
+    title: "Niki",
+    description: "Artista Tattoo",
+    linkHref: "/trabajos/niki",
+    imageSrc: "/images/tatuaje_white_2.png",
+    imageAlt: "Niki Tattoo Artist",
+  },
+  {
+    title: "Piercings",
+    description: "Variedad de piercings",
+    linkHref: "/trabajos/piercings",
+    imageSrc: "/images/tatuaje_white_1.png",
+    imageAlt: "Piercings Gallery",
+  },
+  {
+    title: "Cover Ups",
+    description: "Transforma tus viejos tatuajes",
+    linkHref: "/trabajos/coverups",
+    imageSrc: "/images/tatuaje_white_2.png",
+    imageAlt: "Cover Ups Gallery",
+  },
+  {
+    title: "Eliminacion Laser",
+    description: "Borrado de tatuajes",
+    linkHref: "/trabajos/laser",
+    imageSrc: "/images/tatuaje_white_1.png",
+    imageAlt: "Laser Removal Gallery",
+  },
+];
+
 export default function Home() {
   return (
-    <main className="bg-[var(--background)] pt-20">
+    <main className="bg-[var(--background)]">
+      <ParallaxImages />
       <Hero />
-      <CategorySection title="Maquinas para Tatuar" products={productsMaquinas} />
-      <CategorySection title="Pigmentos para tatuar" products={productsPigmentos} />
-      <CategorySection title="Cartuchos Agujas Grips" products={productsCartuchosAgujasGrips} />
-      <CategorySection title="Mobiliario" products={productsMobiliario} />
+
+      <AnimateOnScroll>
+        <SectionDivider title="ESTUDIO ARTISTICO DE TATUAJES & PIERCING" backgroundImage="/images/Dragon-fondo.jpg" />
+        <StudioInfo />
+      </AnimateOnScroll>
+
+      {/* Trabajos Section */}
+      <AnimateOnScroll>
+        <SectionDivider title="TRABAJOS" backgroundImage="/images/Dragon-fondo.jpg" />
+        <div className="bg-[var(--background)] py-16 sm:py-24 lg:py-32 rounded-lg shadow-xl mb-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-4xl font-bold tracking-tight text-[var(--foreground)] sm:text-5xl uppercase">
+              Trabajos
+            </h2>
+            
+            <p className="mt-4 text-lg leading-8 text-[var(--foreground)]">
+              Visita nuestras galerías de trabajos.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {galleries.map((gallery, index) => (
+              <WorkGallery
+                key={index}
+                title={gallery.title}
+                description={gallery.description}
+                linkHref={gallery.linkHref}
+                imageSrc={gallery.imageSrc}
+                imageAlt={gallery.imageAlt}
+              />
+            ))}
+          </div>
+        </div>
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
+        <SectionDivider title="LIBRO DE VISITAS" backgroundImage="/images/Dragon-fondo.jpg" />
+        <GuestbookSection />
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
+        <SectionDivider title="NOTICIAS" backgroundImage="/images/Dragon-fondo.jpg" />
+        <NewsSection />
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
+        <SectionDivider title="BOUTIQUE BIG BROTHER SUPPLY" backgroundImage="/images/Dragon-fondo.jpg" />
+        <BoutiqueSection id="boutique-section" />
+      </AnimateOnScroll>
+
+      <AnimateOnScroll>
+        <CategorySection 
+          id="products"
+          title="Maquinas para Tatuar"
+          products={productsMaquinas}
+          bgColor="bg-[var(--card-bg)]"
+          description="Tenemos las mejores marcas, somos los distribuidores autorizados para Colombia contamos con garantía y servicio técnico."
+        />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <CategorySection 
+          title="Pigmentos para tatuar"
+          products={productsPigmentos}
+          bgColor="bg-[var(--background)]"
+          description="Descubre una gran variedad de pigmentos de las mejores marcas para todos tus estilos."
+        />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <CategorySection 
+          title="Cartuchos Agujas Grips"
+          products={productsCartuchosAgujasGrips}
+          bgColor="bg-[var(--card-bg)]"
+          description="Encuentra la precisión y seguridad que necesitas con nuestra selección de cartuchos, agujas y grips."
+        />
+      </AnimateOnScroll>
+      <AnimateOnScroll>
+        <CategorySection 
+          title="Mobiliario"
+          products={productsMobiliario}
+          bgColor="bg-[var(--background)]"
+          description="Renueva tu estudio con mobiliario profesional, tu espacio merece lo mejor."
+        />
+      </AnimateOnScroll>
     </main>
   );
 }

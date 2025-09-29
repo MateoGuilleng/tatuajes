@@ -1,62 +1,48 @@
+import Image from "next/image";
+
+const HeroText = () => {
+  return (
+    <div className="mx-auto max-w-2xl text-white z-10 relative text-center">
+      <h1 className="text-5xl font-bold tracking-tight sm:text-7xl uppercase mb-4">
+        Todo lo que necesitas para tu estudio de tatuaje
+      </h1>
+      <h2 className="text-xl sm:text-2xl mt-4 uppercase text-white">
+        En un solo lugar
+      </h2>
+      <div className="mt-10 flex items-center justify-center gap-x-6">
+        <a href="#boutique-section"
+          className="inline-flex items-center justify-center rounded-md border text-base font-medium shadow-sm transition-colors"
+          style={{
+            backgroundColor: "var(--btn-primary-bg)",
+            borderColor: "var(--btn-primary-border)",
+            color: "var(--btn-primary-text)",
+            padding: "0.75rem 1.5rem",
+            borderWidth: "2px", // Add a visible border
+          }}>
+          Ver nuestros productos
+        </a>
+      </div>
+    </div>
+  );
+};
+
 export default function Hero() {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8 bg-[var(--background)]">
+    <div className="relative isolate px-6 pt-14 lg:px-8 h-screen flex items-center justify-center overflow-hidden">
       <div
-        className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[var(--primary-color)] to-[var(--background)] opacity-50 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              `polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%,
-               72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%,
-               27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%,
-               74.1% 44.1%)`,
-          }}
-        />
-      </div>
-      <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-          <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-[var(--foreground)] ring-1 ring-gray-700 hover:ring-gray-600">
-            Envío gratis para compras superiores a $300.000.{' '}
-            <a href="#" className="font-semibold text-[var(--primary-color)]">
-              <span className="absolute inset-0" aria-hidden="true" />
-              Saber más <span aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
+        className="absolute inset-0 -z-20"
+        style={{
+          backgroundImage: `url('/images/Dragon-fondo.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          filter: 'brightness(0.4)', // Darken the image slightly
+        }}
+      ></div>
+      {/* Removed blur effects and dragon images as per fidotattoo.com design */}
+      <div className="mx-auto max-w-7xl py-10 sm:py-20 lg:py-24 z-10">
         <div className="text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-[var(--foreground)] sm:text-6xl">
-            Todo lo que necesitas para tu estudio de tatuaje
-          </h1>
-          <p className="mt-6 text-lg leading-8 text-[var(--secondary-color)]">
-            Encuentra las mejores máquinas, pigmentos, agujas y mobiliario para tu arte.
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a href="#" className="btn-primary">
-              Explorar productos
-            </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-[var(--primary-color)] hover:text-[var(--foreground)]">
-              Contáctanos <span aria-hidden="true">→</span>
-            </a>
-          </div>
+          <HeroText />
         </div>
-      </div>
-      <div
-        className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-        aria-hidden="true"
-      >
-        <div
-          className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[var(--primary-color)] to-[var(--background)] opacity-50 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-          style={{
-            clipPath:
-              `polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%,
-               72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%,
-               27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%,
-               74.1% 44.1%)`,
-          }}
-        />
       </div>
     </div>
   );

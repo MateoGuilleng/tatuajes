@@ -26,7 +26,7 @@ export default function EstudioPage() {
             </div>
             <div className="relative h-96 w-full">
               <img
-                src="/images/big_naranja-023.avif" // Reemplaza con una imagen relevante si tienes una mejor
+                src="/images/tatto2.jpg" // Reemplaza con una imagen relevante si tienes una mejor
                 alt="Big Brother Supply Studio"
                 className="rounded-xl shadow-xl object-cover w-full h-full"
               />
@@ -37,7 +37,7 @@ export default function EstudioPage() {
             {/* Sección de Filosofía */}
             <div className="relative h-96 w-full lg:order-2">
               <img
-                src="/images/tatuaje_white_1.png" // Reemplaza con una imagen relevante
+                src="/images/tatto.jpg" // Reemplaza con una imagen relevante
                 alt="Filosofía de Big Brother Supply"
                 className="rounded-xl shadow-xl object-cover w-full h-full"
               />

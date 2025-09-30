@@ -172,30 +172,7 @@ export default function EstudioPage() {
             </div>
           </div>
 
-          <div className="mt-24 text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-[var(--foreground)] sm:text-4xl mb-6">
-              Conoce a Nuestro Equipo
-            </h2>
-            <p className="mt-4 text-lg leading-8 text-[var(--foreground)] mb-12">
-              Un grupo de artistas apasionados y dedicados a su oficio.
-            </p>
-            {/* Placeholder para equipo - podrías expandir esto con tarjetas de cada artista */}
-            <div className="flex flex-wrap justify-center gap-8">
-              <div className="w-64 bg-[var(--card-bg)] rounded-lg shadow-lg p-6 text-center">
-                <img src="/images/Yomico.webp" alt="Artista 1" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
-                <h3 className="text-xl font-semibold text-[var(--foreground)]">Fido</h3>
-                <p className="text-md text-[var(--primary-color)]">Fundador y Artista Principal</p>
-                <p className="text-sm text-gray-400 mt-2">Especialidad: Realismo, Neotradicional</p>
-              </div>
-              <div className="w-64 bg-[var(--card-bg)] rounded-lg shadow-lg p-6 text-center">
-                <img src="/images/tatuaje_white_2.png" alt="Artista 2" className="w-32 h-32 rounded-full mx-auto mb-4 object-cover" />
-                <h3 className="text-xl font-semibold text-[var(--foreground)]">Nina</h3>
-                <p className="text-md text-[var(--primary-color)]">Artista Senior</p>
-                <p className="text-sm text-gray-400 mt-2">Especialidad: Línea fina, Acuarela</p>
-              </div>
-              {/* Agrega más artistas si es necesario */}
-            </div>
-          </div>
+          
         </div>
       </div>
     );

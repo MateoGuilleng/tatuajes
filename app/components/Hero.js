@@ -10,7 +10,7 @@ const HeroText = () => {
         En un solo lugar
       </h2>
       <div className="mt-10 flex items-center justify-center gap-x-6">
-        <a href="#boutique-section"
+        <a href="/productos"
           className="inline-flex items-center justify-center rounded-md border text-base font-medium shadow-sm transition-colors"
           style={{
             backgroundColor: "var(--btn-primary-bg)",
@@ -28,7 +28,7 @@ const HeroText = () => {
 
 export default function Hero() {
   return (
-    <div className="relative isolate px-6 pt-14 lg:px-8 h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative isolate px-6 pt-24 lg:px-8 min-h-screen flex items-center justify-center overflow-hidden">
       <div
         className="absolute inset-0 -z-20"
         style={{

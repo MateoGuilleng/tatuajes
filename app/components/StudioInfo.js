@@ -34,7 +34,7 @@ export default function StudioInfo() {
           <Image
             src="/images/decoracion2.jpg"
             alt="Big Brother Supply Studio"
-            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
+            className="w-full max-w-lg rounded-xl shadow-xl ring-1 ring-gray-400/10 lg:max-w-none mx-auto"
             width={2432}
             height={1442}
           />

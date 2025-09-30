@@ -1,7 +1,7 @@
 'use client';
 
 import { Fragment, useState } from 'react'
-import { Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
+import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems, Transition } from '@headlessui/react'
 import Link from 'next/link';
 
 function classNames(...classes) {
@@ -13,22 +13,24 @@ export default function Header() {
 
     const mainNavigation = [
         { name: "Inicio", href: "/" },
+        { name: "Big brother supply", href: "/productos" },
         { name: "El Estudio", href: "/estudio" },
         { name: "Cuidados", href: "/cuidados" },
-        { name: "Curso profesional de piercings", href: "/cursos" },
+
         { name: "Trabajos", href: "/trabajos" },
-        { name: "Servicios Tatuajes Bodas", href: "/servicios" },
+    
         { name: "Noticias", href: "/noticias" },
         { name: "Libro de visitas", href: "/libro-de-visitas" },
         { name: "Contacto", href: "/contacto" },
+       
     ];
 
     // Split navigation between visible items and overflow items for a cleaner navbar
     const visibleItems = mainNavigation.filter(item => [
       'Inicio',
+      'Big brother supply',
       'El Estudio',
       'Trabajos',
-      'Servicios Tatuajes Bodas',
       'Contacto'
     ].includes(item.name))
 
@@ -63,7 +65,7 @@ export default function Header() {
           </div>
   
           {/* Navegación desktop */}
-          <div className="hidden lg:flex lg:gap-x-10 flex-1 justify-center items-center">
+          <div className="hidden lg:flex lg:gap-x-6 flex-1 justify-center items-center">
 
             {/* Primary visible navigation */}
             {visibleItems.map((item) => (
@@ -125,6 +127,46 @@ export default function Header() {
      
           
         </nav>
+        <Dialog className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+          <div className="fixed inset-0 z-50" />
+          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-red-950 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+            <div className="flex items-center justify-between">
+              <a href="#" className="-m-1.5 p-1.5">
+                <span className="sr-only">Big Brother Supply</span>
+                <img
+                  className="h-8 w-auto"
+                  src="/images/big_naranja-02.avif"
+                  alt=""
+                />
+              </a>
+              <button
+                type="button"
+                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                <span className="sr-only">Close menu</span>
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div className="mt-6 flow-root">
+              <div className="-my-6 divide-y divide-gray-500/10">
+                <div className="space-y-2 py-6">
+                  {mainNavigation.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
+                    >
+                      {item.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </DialogPanel>
+        </Dialog>
       </header>
     );
   }

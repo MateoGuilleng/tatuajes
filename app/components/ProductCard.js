@@ -1,12 +1,16 @@
+import Image from 'next/image';
+
 export default function ProductCard({ product }) {
   return (
     <div className="group relative rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 flex flex-col items-center justify-between w-full mx-auto p-4 border border-[var(--primary-color)] bg-[var(--card-bg)]">
       {/* Product Image */}
       <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72 flex items-center justify-center mb-4 overflow-hidden rounded-md">
-        <img
+        <Image
           src={product.imageSrc}
           alt={product.imageAlt}
-          className="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform duration-300"
+          layout="fill"
+          objectFit="contain"
+          className="group-hover:scale-110 transition-transform duration-300"
         />
       </div>
 
